@@ -2,8 +2,8 @@
 #include<string.h>
 #include<stdlib.h>
 #pragma warning(disable:4996)   
-long hexToDec(char *source);
-int getIndexOfSigns(char ch);
+long todec(char *source);
+int getindex(char ch);
 void print(struct cache cache[8][5]);
 struct cache
 {
@@ -59,7 +59,7 @@ int main(void)
 					{
 						printf("Input: %s%s\n", index, tag);
 						charindex = 0;
-						int n1 = hexToDec(index);
+						int n1 = todec(index);
 						int n2 = 0;
 						n1 = n1 % 8;
 						n2 = -1;
@@ -131,7 +131,7 @@ int main(void)
 									{
 										n2 = i;
 										break;
-									}//¦³ªÅ¦ì
+									}//æœ‰ç©ºä½
 								}
 							if (n2 == -1)
 							{
@@ -146,7 +146,7 @@ int main(void)
 									}
 								}
 
-							}//¨SªÅ¦ì¨Shit §ä³Ì¤Ö¨Ï¥Î
+							}//æ²’ç©ºä½æ²’hit æ‰¾æœ€å°‘ä½¿ç”¨
 							 
 								if (n2 != -1)
 								{
@@ -154,7 +154,7 @@ int main(void)
 									strcpy(lrucache[n1][n2].index, index);
 									lrucache[n1][n2].vaild = 1;
 								}
-							// }//§ä¨ìªÅ¦ì
+							// }//æ‰¾åˆ°ç©ºä½
 
 							}
 							print(lrucache);
@@ -177,8 +177,7 @@ int main(void)
 	system("PAUSE");
 	return 0;
 }
-
-long hexToDec(char *source)
+long todec(char *source)
 {
 	long sum = 0;
 	long t = 1;
@@ -195,7 +194,7 @@ long hexToDec(char *source)
 }
 
 
-int getIndexOfSigns(char ch)
+int getindex(char ch)
 {
 	if (ch >= '0' && ch <= '9')
 	{
