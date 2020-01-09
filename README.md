@@ -6,7 +6,8 @@ LRU
 執行結果
 
 LRU
-![image]
+![image](https://github.com/lin10901/108HW3/blob/master/hw3fifo-1.png)
+![image](https://github.com/lin10901/108HW3/blob/master/hw3fifo-2.png)
 
 FIFO
 ![image]
